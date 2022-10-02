@@ -1,0 +1,143 @@
+body{
+width: 100%;
+background-color: #FFCB8C;
+}
+
+
+#wrapper{
+    
+    display: grid;
+    grid-template-areas: "header header header"
+                         "menu . noticia";
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: solid 2px;
+    border-radius: 2%;
+background-color:#FFBB54;
+}
+
+#header{
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "logo . titulo";
+    font-size: 9px;
+}
+
+#header span{
+    display: flex;
+    text-align: center;
+    padding-right: 10px;
+}
+
+
+
+#menu {
+grid-area: header-start;
+display: flex;
+flex-direction: column;
+margin-top: 140px;
+margin-left: 20px;
+
+}
+
+#menu button {
+    margin-left:50px ;
+    overflow: hidden;
+	font-size:20px;
+	background-color:#267499;
+	color:white;
+    border: 2px solid currentColor;
+    border-radius: 10px;
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: 100;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: .2s; 
+    transform: ease-in-out;
+    will-change: transform;
+}
+
+#menu button::after{
+    background-color: #67BCE6;
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+#menu button:hover::after{
+    transform: translate(0, 0);
+    }
+    
+#menu button:hover{
+    border: 2px solid transparent;
+    color: white;
+    transform: scale(1.05);
+    will-change: transform;
+    box-shadow: 5px 5px rgba(0,0,0,0.5);
+    background-color:#67BCE6;
+  }
+
+#noticia{
+    margin-right: 200px;
+}
+
+#noticia h1{
+    margin-left: 150px;
+	font-size: 27px;
+}
+
+
+ 
+
+#noticia p{
+    margin: 15px auto;
+    padding: 5px;
+	font-size: 19px;
+	line-height: 20px;
+}
+
+#noticia{
+    grid-area: noticia;
+    margin-top: -220px;
+}
+
+#header img{
+      grid-area: logo;
+      border-radius: 20px;
+      width: 110px;
+      margin-left: 100px;
+      margin-top: 10px;
+
+      border: 2px solid black;
+}
+
+#header span {
+    grid-area: titulo;
+    font-size: 5em;
+    text-align: right;
+    padding-top: 20px;
+}
+.linea{
+    display: block;
+
+    height: 20px;
+    padding-bottom: 50px;
+    background-color: black;
+}
